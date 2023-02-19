@@ -1,0 +1,24 @@
+﻿@page
+@model WebApplication3.Pages.Temp_And_Humidity.CreateModel
+@{
+    <h2>Добавление нового датчика</h2>
+    <form method="post">    
+            <p>
+                <label>Номера устройства:</label><br />
+                <input name="id" type="number" />
+            </p>
+            <p>
+                <label>Температура:</label><br />
+                <input name="temperature" />
+            </p>
+            <p>
+                <label>Влажность:</label><br />
+                <input name="humidity"  />
+            </p>
+        <input type="submit" value="Отправить" />
+
+
+    </form>
+
+
+}

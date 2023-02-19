@@ -1,0 +1,35 @@
+﻿@page  
+@model WebApplication3.Pages.Temp_And_Humidity.IndexModel
+@{  
+    ViewData["Title"] = "";
+<h2>Список датчиков</h2>
+<p><a href="Temp_And_Humidity/Create">Внести данные вручную</a></p>
+
+<form class="form" method="post">
+
+        <input type="submit" value="Получение данных с 1 датчика" asp-page-handler="Button1" />
+        <input type="submit" value="Получение данных с 2 датчика" asp-page-handler="Button2" />
+        <input type="submit" value="Получение данных с 3 датчика" asp-page-handler="Button3" />
+        <input type="submit" value="Получение данных с 4 датчика" asp-page-handler="Button4" />
+
+
+    </form>
+    <table>
+        <tr><th>Дата</th><th>Номер устройства</th><th>Температура</th><th>Влажность</th></tr>
+    @foreach (var sensor in Model.obj_Temp_And_Humidity)
+    {
+            <tr>
+
+                <td>@sensor.date</td>
+
+                <td><center>@sensor.id</center></td>
+
+                <td><center>@sensor.temperature</center></td>
+
+                <td><center>@sensor.humidity</center></td>
+
+            </tr>
+    }
+</table>
+}
+

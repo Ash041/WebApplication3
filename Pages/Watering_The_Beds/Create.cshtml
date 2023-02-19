@@ -1,0 +1,16 @@
+﻿@page
+@model WebApplication3.Pages.Watering_The_Beds.CreateModel
+@{
+    <h2>Открыть/Закрыть полив</h2>
+    <form method="post">
+                <p>
+                    <label>Номер устройства</label><br />
+                    <input name="id" type="number" />
+                </p>          
+                <p>
+                    <label>Статус:</label><br />
+                   <input name="state" type="number" />
+                </p>
+                <input type="submit" value="Отправить" />
+    </form>
+}

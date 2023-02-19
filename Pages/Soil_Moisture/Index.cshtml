@@ -1,0 +1,32 @@
+﻿@page
+@model WebApplication3.Pages.Soil_Moisture.IndexModel
+@{
+    ViewData["Title"] = "";
+    <h2>Список датчиков</h2>
+    <p><a href="Soil_Moisture/Create">Добавить датчик</a></p>
+    <form class="form" method="post">
+
+        <input type="submit" value="Получение данных с 1 датчика" asp-page-handler="Button1" />
+        <input type="submit" value="Получение данных с 2 датчика" asp-page-handler="Button2" />
+        <input type="submit" value="Получение данных с 3 датчика" asp-page-handler="Button3" />
+        <input type="submit" value="Получение данных с 4 датчика" asp-page-handler="Button4" />
+        <input type="submit" value="Получение данных с 5 датчика" asp-page-handler="Button5" />
+        <input type="submit" value="Получение данных с 6 датчика" asp-page-handler="Button6" />
+
+    </form>
+    <table>
+        <tr><th>Дата</th><th>Номер устройства</th><th>Влажность</th></tr>
+        @foreach (var sensor in Model.Soil_Moisture)
+        {
+            <tr> 
+
+                <td><center>@sensor.date</center></td>
+
+                <td><center>@sensor.id</center></td>
+
+                <td><center>@sensor.humidity</center></td>
+
+            </tr>
+        }
+    </table>
+}

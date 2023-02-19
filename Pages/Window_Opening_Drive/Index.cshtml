@@ -1,0 +1,19 @@
+﻿@page
+@model WebApplication3.Pages.Window_Opening_Drive.IndexModel
+@{
+    ViewData["Title"] = "";
+    <h2>Статус автоматизированного привода удаленного открытия форточек теплицы</h2>
+    <p><a href="Window_Opening_Drive/Create">Изменить статус привода</a></p>  
+    <table>
+        <tr><th>Дата:</th><th>Статус:</th></tr>
+        @foreach (var state in Model.Window_Opening_Drive)
+        {
+              <tr>
+                <td><center>@state.date</center></td>
+
+                <td><center>@state.state</center></td>
+
+            </tr>
+        }
+    </table>
+}

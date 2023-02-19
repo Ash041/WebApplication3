@@ -1,0 +1,21 @@
+﻿@page
+@model WebApplication3.Pages.Watering_The_Beds.IndexModel
+@{
+    ViewData["Title"] = "";
+    <h2>Статус полива грядки</h2>
+    <p><a href="Watering_The_Beds/Create">Изменить статус полива грядки</a></p>
+    <table>
+        <tr><th>Дата</th><th>Номер устройства</th><th>Статус</th></tr>
+        @foreach (var state in Model.Watering_The_Beds)
+        {
+            <tr>
+                <td><center>@state.date</center></td>
+
+                <td><center>@state.id</center></td>
+
+                <td><center>@state.state</center></td>
+
+            </tr>
+        }
+    </table>
+}

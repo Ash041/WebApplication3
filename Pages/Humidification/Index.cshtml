@@ -1,0 +1,20 @@
+﻿@page
+@model WebApplication3.Pages.Humidification.IndexModel
+@{
+    ViewData["Title"] = "";
+    <h2>Статус единой системы увлажнения</h2>
+    <p><a href="Humidification/Create">Начать\закончить увлажение</a></p>
+    <h2>0 - Закончить увлажнение</h2>
+    <h2>1 - Начать увлажнение</h2>
+    <table>
+        <tr>><th>Дата</th><th>Статус:</th></tr>
+        @foreach (var state in Model.Humidification)
+        {
+                <tr>
+                <td><center>@state.date</center></td>
+
+                <td><center>@state.state</center></td>
+               </tr>
+        }
+    </table>
+}
